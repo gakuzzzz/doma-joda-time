@@ -1,0 +1,17 @@
+target/
+project/target
+project/project/target
+*.class
+*.swp
+.project
+.classpath
+.settings
+.cache
+.history
+.ivy2/
+.idea/
+.idea_modules/
+.apt_generated/
+.factorypath
+sbt-launch/
+sbt.bat
