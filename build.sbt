@@ -4,7 +4,7 @@ version := "1.0-SNAPSHOT"
 
 libraryDependencies ++= Seq(
   "joda-time" % "joda-time" % "2.1",
-  "org.seasar.doma" % "doma" % "[1.24.0,)",
+  "org.seasar.doma" % "doma" % "[1.25.0,)",
   "com.h2database" % "h2" % "1.3.170" % "test",
   "junit" % "junit" % "4.8.1" % "test"
 )
