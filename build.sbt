@@ -26,3 +26,9 @@ javacOptions in Test ++= Seq(
 )
 
 testOptions += Tests.Argument(TestFrameworks.JUnit, "-q", "-v")
+
+artifactName := { (sv: ScalaVersion, module: ModuleID, artifact: Artifact) =>
+  artifact.name + "-" + module.revision + "." + artifact.extension
+}
+
+crossPaths := false
