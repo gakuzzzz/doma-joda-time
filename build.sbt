@@ -4,14 +4,15 @@ version := "1.0-SNAPSHOT"
 
 libraryDependencies ++= Seq(
   "joda-time" % "joda-time" % "2.1",
-  "org.seasar.doma" % "doma" % "[1.26.0,)",
+  "org.seasar.doma" % "doma" % "1.27.0-SNAPSHOT",
   "com.h2database" % "h2" % "1.3.170" % "test",
   "junit" % "junit" % "4.8.1" % "test",
   "com.novocode" % "junit-interface" % "0.10-M2" % "test"
 )
 
 resolvers ++= Seq(
-  "seasar" at "http://maven.seasar.org/maven2/"
+  "seasar" at "http://maven.seasar.org/maven2/",
+  "seasar snapshots" at "http://maven.seasar.org/maven2-snapshot/"
 )
 
 organization := "jp.t2v"
