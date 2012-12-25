@@ -11,12 +11,12 @@ public class DateTimeConverter implements DomainConverter<DateTime, Timestamp> {
 
 	@Override
 	public Timestamp fromDomainToValue(final DateTime dateTime) {
-		return new Timestamp(dateTime.toDate().getTime());
+		return dateTime == null ? null : new Timestamp(dateTime.toDate().getTime());
 	}
 
 	@Override
 	public DateTime fromValueToDomain(final Timestamp timestamp) {
-		return new DateTime(timestamp.getTime());
+		return timestamp == null ? null : new DateTime(timestamp.getTime());
 	}
 
 }

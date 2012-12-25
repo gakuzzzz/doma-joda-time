@@ -11,12 +11,12 @@ public class LocalDateConverter implements DomainConverter<LocalDate, Date> {
 
 	@Override
 	public Date fromDomainToValue(final LocalDate date) {
-		return new Date(date.toDate().getTime());
+		return date == null ? null : new Date(date.toDate().getTime());
 	}
 
 	@Override
 	public LocalDate fromValueToDomain(final Date date) {
-		return new LocalDate(date.getTime());
+		return date == null ? null : new LocalDate(date.getTime());
 	}
 
 }

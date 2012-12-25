@@ -11,12 +11,12 @@ public class LocalTimeConverter implements DomainConverter<LocalTime, Time> {
 
 	@Override
 	public Time fromDomainToValue(final LocalTime time) {
-		return new Time(time.toDateTimeToday().toDate().getTime());
+		return time == null ? null : new Time(time.toDateTimeToday().toDate().getTime());
 	}
 
 	@Override
 	public LocalTime fromValueToDomain(final Time time) {
-		return new LocalTime(time.getTime());
+		return time == null ? null : new LocalTime(time.getTime());
 	}
 
 }
