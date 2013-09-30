@@ -1,10 +1,10 @@
 name := "doma-joda-time"
 
-version := "1.1-SNAPSHOT"
+version := "1.2-SNAPSHOT"
 
 libraryDependencies ++= Seq(
   "joda-time"       % "joda-time"       % "2.3",
-  "org.seasar.doma" % "doma"            % "1.33.0",
+  "org.seasar.doma" % "doma"            % "1.35.0",
   "com.h2database"  % "h2"              % "1.3.170" % "test",
   "junit"           % "junit"           % "4.8.1"   % "test",
   "com.novocode"    % "junit-interface" % "0.10-M2" % "test"
@@ -32,8 +32,6 @@ javacOptions in Test ++= Seq(
 
 testOptions += Tests.Argument(TestFrameworks.JUnit, "-q", "-v")
 
-artifactName := { (sv: ScalaVersion, module: ModuleID, artifact: Artifact) =>
-  artifact.name + "-" + module.revision + "." + artifact.extension
-}
-
 crossPaths := false
+
+autoScalaLibrary := false
